@@ -7,13 +7,11 @@
 }
 
 @mixin mx-xpand {
-    grid-row: 4;
     background-color: $white;
     width: 45px;
     height: 45px;
     border-radius: 50%;
-    justify-content: center;
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-self: center;
 }

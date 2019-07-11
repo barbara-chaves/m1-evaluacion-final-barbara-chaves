@@ -4,6 +4,9 @@
     background-position: center;   
     height: 100vh;
     width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 .nav {
@@ -23,27 +26,24 @@
 
 .header {
     font-family: $text-font;
-    height: 100%;
     width: 100%;
-    display: grid;
-    grid-template-rows: 6fr 2fr 1fr 3fr;
-    grid-template-columns: 100%;
+    height: 100%;
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
     color: $head-title-color;
     text-align: center;
-    justify-content: center;
     align-items: center;
-    
-    
     
     &__title {
         font-family: $title-font;
         text-transform: uppercase;
-        grid-row: 2;
+        flex-basis: 39%;
         font-size: 42px;
         font-weight: bold;
         line-height: 55px;
         max-width: 290px;
-        margin: auto;
+        margin: 0 auto;
         
         @media all and (min-width: 768px) {
             font-size: 80px;
@@ -52,19 +52,23 @@
     }
 
     &__text {
-        grid-row: 3;
+        flex-basis: 6%;
+        margin: 0;
     }
 
-    &__link {
-        grid-row: 4;
-        background-color: $white;
-        width: 45px;
-        height: 45px;
-        border-radius: 50%;
-        justify-content: center;
-        display: flex;
+    &__b {
+        flex-basis: 55%;
+        flex-grow: 1;
         align-items: center;
-        justify-self: center;
+        display: flex;
     }
+
+    &__buttom {
+        @include mx-xpand;
+
+      
+    }
+
+
 
 }
