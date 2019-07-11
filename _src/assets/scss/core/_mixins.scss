@@ -5,3 +5,15 @@
     justify-content: center;
     border-radius: 22.5px;
 }
+
+@mixin mx-xpand {
+    grid-row: 4;
+    background-color: $white;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+}

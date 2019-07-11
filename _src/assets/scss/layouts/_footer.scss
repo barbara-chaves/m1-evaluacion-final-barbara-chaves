@@ -1,0 +1,41 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $footer-bg-color;
+    font-size: 1rem;
+    text-align: center;
+    padding-bottom: 45px;
+
+    &__icon {
+        @include mx-xpand;
+        position: relative;
+        transform: translateY(-50%)
+    }
+}
+
+.nav__list, .social__list {
+    padding: 0;
+    line-height: 30px;
+    &__item {
+        list-style: none;
+    }
+}
+.nav__link, .social__link {
+    text-decoration-line: none;
+    color: $white;
+    text-transform: uppercase;
+    font-family: $text-font;
+
+}
+
+.copyrigth {
+    color: $white;
+    font-size: 14px;
+
+    .heart {
+        color: red;
+    }
+}
+
