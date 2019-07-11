@@ -1,11 +1,28 @@
 .head {
     background-image: url("../images/cover.jpg");
-    background-size: cover;    
+    background-size: cover; 
+    background-position: center;   
     height: 100vh;
     width: 100vw;
 }
 
+.nav {
+    display: inline-block;
+    
+    &__buttom {
+        background-color: $hamburger-color;
+        width: 44px;
+        height: 44px;
+        display: flex;
+        justify-content: center;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+    }
+}
+
 .header {
+    font-family: $text-font;
     height: 100%;
     width: 100%;
     display: grid;
@@ -19,6 +36,7 @@
     
     
     &__title {
+        font-family: $title-font;
         text-transform: uppercase;
         grid-row: 2;
         font-size: 42px;
@@ -49,14 +67,4 @@
         justify-self: center;
     }
 
-    &__buttom {
-        background-color: $buttom-color;
-        width: 44px;
-        height: 44px;
-        display: flex;
-        justify-content: center;
-        position: fixed;
-        top: 0px;
-        left: 0px;
-    }
 }
