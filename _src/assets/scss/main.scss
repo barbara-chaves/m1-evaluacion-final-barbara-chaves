@@ -1,4 +1,5 @@
 @import 'core/variables';
+@import 'core/mixins';
 @import 'layouts/reset';
 @import 'core/links';
 @import 'layouts/header';
@@ -31,6 +32,7 @@
         height: 45px;
         font-size: 20px;
         color: $buttom-color;
+        text-decoration-line: none;
         border: 2px solid $buttom-color;
         border-radius: 22.5px;
         display: flex;
@@ -62,16 +64,13 @@
     }
 
     &__buttom {
-        display: flex;
-        align-items: center;
-        justify-content: center;
         width: 184px;
         height: 45px;
         color: $white;
-        border-radius: 22.5px;
         background-color: $buttom-color;
         margin: auto;
         margin-top: 45px;
+        @include mx-button;
     }
 
 }
