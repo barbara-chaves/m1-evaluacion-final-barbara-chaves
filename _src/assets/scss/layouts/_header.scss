@@ -1,0 +1,63 @@
+.head {
+    background-image: url("../images/cover.jpg");
+    background-size: cover;    
+    height: 100vh;
+    width: 100vw;
+}
+
+.header {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 6fr 2fr 1fr 3fr;
+    grid-template-columns: 100%;
+    color: $head-title-color;
+    font-family: $font;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    
+    
+    
+    &__title {
+        text-transform: uppercase;
+        grid-row: 2;
+        font-size: 42px;
+        font-weight: bold;
+        line-height: 55px;
+        max-width: 290px;
+        margin: auto;
+        
+        @media all and (min-width: 768px) {
+            font-size: 80px;
+            line-height: 106px;
+        }
+    }
+
+    &__text {
+        grid-row: 3;
+    }
+
+    &__link {
+        grid-row: 4;
+        background-color: $icon-bg-color;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        justify-self: center;
+    }
+
+    &__buttom {
+        background-color: $buttom-color;
+        width: 44px;
+        height: 44px;
+        display: flex;
+        justify-content: center;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+    }
+}
