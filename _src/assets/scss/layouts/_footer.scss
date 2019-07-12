@@ -9,13 +9,19 @@
         font-size: 1rem;
         text-align: center;
         padding-bottom: 45px;
+        margin: auto;
 
         @media all and (min-width: 768px) {
             flex-direction: row-reverse;
             justify-content: space-around;
             align-items: flex-start;
             text-align: start;
-            max-width: 100%;
+            max-width: 690px;
+         
+        }
+
+        @media all and (min-width: 1280px) {
+            max-width: 540px;
         }
     
         &__icon {
@@ -40,7 +46,6 @@
             font-family: $text-font;
         
         }
-        
 
         &__social {
             @media all and (min-width: 768px) {
@@ -48,9 +53,18 @@
             }
         }
 
-        .copyrigth {
+        &__copyrigth {
             color: $white;
             font-size: 14px;
+
+            &__text:first-of-type {
+                line-height: 30px;
+                margin-bottom: 0;
+            }
+
+            &__text:nth-of-type(2) {
+                margin: 0;
+            }
         
             .heart {
                 color: red;
