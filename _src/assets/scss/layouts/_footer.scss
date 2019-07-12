@@ -27,13 +27,14 @@
         &__icon {
             @include mx-xpand;
             position: relative;
-            transform: translateY(-50%);
             margin: auto;
+            transform: translateY(-50%);
         }
 
         .nav__list, .social__list {
             padding: 0;
             line-height: 30px;
+            
             &__item {
                 list-style: none;
             }
@@ -75,8 +76,13 @@
             }
         }
 
-    }    
+    }  
+}
 
-}    
-
+.footer__icon__img {
+    animation-name: footer-buttom;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
 

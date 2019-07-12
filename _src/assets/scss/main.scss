@@ -2,6 +2,7 @@
 @import 'core/mixins';
 @import 'layouts/reset';
 @import 'core/links';
+@import 'core/animations';
 @import 'layouts/header';
 @import 'components/typography';
 
@@ -42,6 +43,10 @@
             font-size: 18px;
             line-height: 30px;
             margin: 0 0 30px 0;
+
+            @media all and (min-width: 768px) {
+                font-size: 20px;
+            }
         }
 
         &__buttom {
@@ -50,29 +55,29 @@
             height: 45px;
             font-size: 20px;
             color: $buttom-color;
-            text-decoration-line: none;
+            background-color: white;
             border: 2px solid $buttom-color;
-            border-radius: 22.5px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @include mx-button(white, $buttom-color);
         }
     }
 }
+
 
 .section2 {
     background-color: $reasons-bg-color;
 
     .reasons {
-        padding: 30px 0 60px 0;
         font-family: $text-font;
         display: grid;
+        grid-template-rows: 0.5fr repeat(4, 1fr);
+        justify-content: center;
+
         
         @media all and (min-width: 768px) {
             max-width: 700px;
             margin: auto;
             grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1.2fr 1fr;
+            grid-template-rows: 0.8fr 1fr 0.8fr;
             text-align: center;
             justify-content: center;
         }   
@@ -83,10 +88,12 @@
         } 
     
         &__title {
+
+            margin-top: 30px;
+
             @media all and (min-width: 768px) {
                 grid-column: span 3;
                 font-size: 26px;
-                margin: 0;
             }
 
             @media all and (min-width: 1280px) {
@@ -98,6 +105,7 @@
             max-width: 180px;
             margin: auto;
             line-height: 30px;
+            text-align: center;
 
             @media all and (min-width: 768px) {
                 margin: 0;
@@ -127,7 +135,8 @@
 
                 @media all and (min-width: 768px) {
                     font-size: 20px;
-                    
+                    align-self: center;
+                    justify-self: center;
                 }
             }
         }
@@ -135,15 +144,16 @@
         &__buttom {
             width: 184px;
             height: 45px;
-            color: $white;
-            background-color: $buttom-color;
-            margin: auto;
-            margin-top: 45px;
-            @include mx-button;
+            margin: 45px auto 60px auto;
+            display: flex;
+            align-items: end;
+            align-self: end;
+            
+            @include mx-button($buttom-color, white);
 
             @media all and (min-width: 768px) {
                 grid-column: span 3;
-                width: 30%; 
+                width: 255px; 
                 font-size: 20px;
             }
         }

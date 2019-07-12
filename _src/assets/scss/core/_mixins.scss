@@ -1,9 +1,18 @@
-@mixin mx-button {
+@mixin mx-button($color1, $color2) {
     display: flex;
     text-decoration-line: none;
     align-items: center;
     justify-content: center;
     border-radius: 22.5px;
+    background-color: $color1;
+    color: $color2;
+    border: 2px solid $color2;
+    transition: all ease 1s;
+    &:hover {
+        background-color: $color2;
+        color: $color1;
+        border: 2px solid $color1;
+    }
 }
 
 @mixin mx-xpand {
@@ -14,4 +23,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transform: scale(1) translateY(0);
+    transition: all ease 0.5s;
+
 }
