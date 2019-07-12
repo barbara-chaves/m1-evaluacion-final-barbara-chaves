@@ -47,6 +47,10 @@
         
         }
 
+        &__nav, &__social, &__copyrigth {
+            min-width: 160px;
+        }
+
         &__social {
             @media all and (min-width: 768px) {
                 order: -1;
