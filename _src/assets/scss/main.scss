@@ -7,39 +7,59 @@
 
 .section1 {
 
-    padding: 30px 15px 45px 15px;
+    padding: 30px 0 45px 0;
     max-width: 290px;
     margin: auto;
     font-family: $text-font;
+
+    @media all and (min-width: 768px) {
+        max-width: 690px;
+        padding-bottom: 60px;
+    }
+
+    @media all and (min-width: 1280px) {
+        max-width: 730px;
+        padding-top: 60px;
+    }
+
+    .article {
+       
+        &__small {
+            color: $small-color;
+        }
+
+        &__title {
+            margin: 7px 0 15px 0;
+           
+            @media all and (min-width: 768px) {
+                margin-bottom: 30px;
+            }
+
+        }
+    
+        &__resume {
+            color: $article-text-color;
+            font-size: 18px;
+            line-height: 30px;
+            margin: 0 0 30px 0;
+        }
+
+        &__buttom {
+            display: inline-block;
+            width: 76px;
+            height: 45px;
+            font-size: 20px;
+            color: $buttom-color;
+            text-decoration-line: none;
+            border: 2px solid $buttom-color;
+            border-radius: 22.5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
 }
 
-.article {
-   
-    &__small {
-        color: $small-color;
-    }
-    // &__title {
-        
-    // }
-    &__resume {
-        color: $article-text-color;
-        font-size: 18px;
-        line-height: 30px;
-    }
-    &__buttom {
-        display: inline-block;
-        width: 76px;
-        height: 45px;
-        font-size: 20px;
-        color: $buttom-color;
-        text-decoration-line: none;
-        border: 2px solid $buttom-color;
-        border-radius: 22.5px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-}
 
 .reasons {
     padding: 30px 0 60px 0;
