@@ -12,7 +12,21 @@
 .nav {
     display: inline-block;
     
-    &__buttom {
+}
+
+.header {
+    font-family: $text-font;
+    color: $head-title-color;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+    align-items: center;
+    text-align: center;
+
+
+    &__nav {
         background-color: $hamburger-color;
         width: 44px;
         height: 44px;
@@ -22,52 +36,58 @@
         top: 0px;
         left: 0px;
     }
-}
-
-.header {
-    font-family: $text-font;
-    width: 100%;
-    height: 100%;
-    flex-basis: 50%;
-    display: flex;
-    flex-direction: column;
-    color: $head-title-color;
-    text-align: center;
-    align-items: center;
     
     &__title {
         font-family: $title-font;
         text-transform: uppercase;
-        flex-basis: 39%;
         font-size: 42px;
         font-weight: bold;
         line-height: 55px;
         max-width: 290px;
         margin: 0 auto;
+        flex-basis: 39%;
         
         @media all and (min-width: 768px) {
             font-size: 80px;
             line-height: 106px;
+            max-width: 690px;
+            flex-basis: 50%;
         }
     }
 
     &__text {
-        flex-basis: 6%;
+        flex-basis: 10%;
         margin: 0;
-    }
-
-    &__b {
-        flex-basis: 55%;
-        flex-grow: 1;
-        align-items: center;
         display: flex;
+        align-items: center;
+
+        @media all and (min-width: 768px) {
+            font-size: 24px;
+            flex-basis: 15%;
+        }
     }
 
-    &__buttom {
-        @include mx-xpand;
+    &__button {
+        flex-basis: 51%;
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        padding-bottom: 40px;
 
-      
+        @media all and (min-width: 768px) {
+            font-size: 24px;
+            flex-basis: 30%;
+
+
+        }
+
+        &__link {
+            @include mx-xpand;
+    
+          
+        }
     }
+
 
 
 
