@@ -75,7 +75,11 @@
         margin-bottom: 40px;
         transform: scale(1) translateY(0);
         box-shadow: 0;
-        transition: all ease 0.5s; 
+        transition: all ease 0.5s;
+        
+        @media all and (max-width: 767px) {
+            display: none;
+        }
 
         &:hover {
             transform: scale(1.5) translateY(10%);
